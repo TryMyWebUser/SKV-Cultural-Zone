@@ -2910,12 +2910,14 @@ input[type=submit]:focus {
 .home-service .service-wrapper .service-content {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 45px;
+  grid-column-gap: 35px;
+  grid-row-gap: 35px;
   margin-bottom: 45px;
 }
 @media screen and (max-width: 1199px) {
   .home-service .service-wrapper .service-content {
     grid-column-gap: 25px;
+    grid-row-gap: 25px;
   }
 }
 @media screen and (max-width: 991px) {
@@ -4146,7 +4148,7 @@ input[type=submit]:focus {
   background-position: center center;
   position: relative;
   z-index: 1;
-  padding-top: 100px;
+  /* padding-top: 100px; */
   background-size: cover;
 }
 .site-footer .footer-overlay {
