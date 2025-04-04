@@ -13,7 +13,7 @@
                                 <a href="mailto:skvculturalzone@gmail.com"><i class="fas fa-envelope"></i> skvculturalzone@gmail.com</a>
                             </li>
                             <li>
-                                <a href="#"><i class="fas fa-map-marker-alt"></i> 178, Kuppichipalayam, SRKV Post, Coimbatore - 641020</a>
+                                <a href="https://maps.app.goo.gl/3jQ4FzwX9mycdqUY7"><i class="fas fa-map-marker-alt"></i> 178, Kuppichipalayam, SRKV Post, Coimbatore - 641020</a>
                             </li>
                         </ul>
                     </div>

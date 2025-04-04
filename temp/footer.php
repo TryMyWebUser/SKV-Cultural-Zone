@@ -70,7 +70,7 @@
                             <a class="p-0" style="color: #fff;" href="mailto:skvculturalzone@gmail.com"><i class="fas fa-envelope"></i> skvculturalzone@gmail.com</a>
                         </span><br>
                         <span class="d-flex">
-                            <a class="p-0" style="color: #fff; display: contents;" href="#"><i class="fas fa-map-marker-alt"></i> 178, Kuppichipalayam Rd, Periyanaickenpalayam, <br>SRKV Post, Coimbatore - 641020</a>
+                            <a class="p-0" style="color: #fff; display: contents;" href="https://maps.app.goo.gl/3jQ4FzwX9mycdqUY7"><i class="fas fa-map-marker-alt"></i> 178, Kuppichipalayam Rd, Periyanaickenpalayam, <br>SRKV Post, Coimbatore - 641020</a>
                         </span>
                     </aside>
                 </div>

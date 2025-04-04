@@ -57,8 +57,8 @@
                                                     </span>
                                                     <div class="details-content">
                                                         <h5>Phone Number :</h5>
-                                                        <span>+91 984 268 8981</span>
-                                                        <span>+91 807 257 1057</span>
+                                                        <span><a href="tel:9842688981">+91 984 268 8981</a> / <a href="tel:8072571057">+91 807 257 1057</a></span>
+                                                        <span></span>
                                                     </div>
                                                 </li>
                                                 <li>
@@ -67,8 +67,8 @@
                                                     </span>
                                                     <div class="details-content">
                                                         <h5>Location Address :</h5>
-                                                        <span>178, Kuppichipalayam Rd, Periyanaickenpalayam,</span>
-                                                        <span>SRKV Post, Coimbatore - 641020</span>
+                                                        <a href="https://maps.app.goo.gl/3jQ4FzwX9mycdqUY7"><span>178, Kuppichipalayam Rd, Periyanaickenpalayam,</span>
+                                                        <span>SRKV Post, Coimbatore - 641020</span></a>
                                                     </div>
                                                 </li>
                                                 <li>

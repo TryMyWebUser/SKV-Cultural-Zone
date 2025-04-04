@@ -37,7 +37,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="about-left-content">
-                                    <figure class="figure-round-border" style="background: #adbd0f; padding: 5rem;">
+                                    <figure class="figure-round-border" style="background: #F24080; padding: 5rem;">
                                         <img src="assets/img/QR.png" class="m-0" alt="Payment Scanner Images" />
                                     </figure>
                                 </div>
