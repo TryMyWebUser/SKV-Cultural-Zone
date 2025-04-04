@@ -4413,7 +4413,7 @@ input[type=submit]:focus {
 .inner-baner-container {
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: bottom;
   text-align: center;
   position: relative;
   padding: 150px 0;

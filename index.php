@@ -56,7 +56,7 @@
                             <div class="col-md-6">
                                 <div class="about-left-content">
                                     <figure class="figure-round-border">
-                                        <img src="assets/img/educator-img13.jpg" alt="" />
+                                        <img src="assets/img/about.jpg" alt="About Image" />
                                     </figure>
                                 </div>
                             </div>
