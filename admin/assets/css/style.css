@@ -5126,7 +5126,7 @@ ul {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url(../img/bg/1.jpg);
+  background-image: url('../../../assets/img/aboutus.jpg');
   background-position: center;
   background-size: cover;
   background-blend-mode: overlay;

@@ -11,11 +11,11 @@ class Database
             $server = "localhost";
             $username = "root";
             $password = "";
-            $dbname = "ultra";
+            $dbname = "skv";
             // $server = "localhost";
-            // $username = "trymywebsites_ultra";
-            // $password = "ultra@2025";
-            // $dbname = "trymywebsites_ultradb";
+            // $username = "trymywebsites_skv";
+            // $password = "skv@2025";
+            // $dbname = "trymywebsites_skvdb";
 
             // create connection
             $connection = new mysqli($server, $username, $password, $dbname);

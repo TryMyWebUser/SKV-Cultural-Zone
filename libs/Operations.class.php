@@ -23,6 +23,12 @@ class Operations
         $result = $conn->query($sql);
         return iterator_to_array($result);
     }
+    public static function getSubCateChecker($conn)
+    {
+        $sql = "SELECT * FROM `sub-category` ORDER BY `created_at` ASC";
+        $result = $conn->query($sql);
+        return iterator_to_array($result);
+    }
     public static function getProductChecker($conn)
     {
         $sql = "SELECT * FROM `products` ORDER BY `created_at` ASC";
@@ -47,6 +53,13 @@ class Operations
     {
         $getID = $_GET['edit_id'];
         $sql = "SELECT * FROM `category` WHERE `id` = '$getID'";
+        $result = $conn->query($sql);
+        return $result ? $result->fetch_assoc() : null;
+    }
+    public static function getSubCate($conn)
+    {
+        $getID = $_GET['edit_id'];
+        $sql = "SELECT * FROM `sub-category` WHERE `id` = '$getID'";
         $result = $conn->query($sql);
         return $result ? $result->fetch_assoc() : null;
     }
