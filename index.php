@@ -41,7 +41,7 @@
                             <div class="banner-right col-md-6">
                                 <figure class="banner-img">
                                     <div class="image-overlay-oval pattern-overlay"></div>
-                                    <img src="assets/img/educator-img33.png" alt="" />
+                                    <img src="assets/img/hero-bg.png" alt="Hero BG Image" />
                                 </figure>
                             </div>
                         </div>

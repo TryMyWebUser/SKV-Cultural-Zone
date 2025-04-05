@@ -60,6 +60,26 @@
                     </li>
                 </ul>
             </li>
+            <li class="cx-sb-item sb-drop-item">
+                <a href="javascript:void(0)" class="cx-drop-toggle">
+                    <i class="ri-list-check-3"></i>
+                    <span class="condense">Category Content<i class="drop-arrow ri-arrow-down-s-line"></i></span>
+                </a>
+                <ul class="cx-sb-drop">
+                    <li class="list">
+                        <a href="addCl_C.php" class="cx-page-link drop">add Class Content</a>
+                    </li>
+                    <li class="list">
+                        <a href="viewCl_C.php" class="cx-page-link drop">view Class Content</a>
+                    </li>
+                    <li class="list">
+                        <a href="addCo_C.php" class="cx-page-link drop">add Course Content</a>
+                    </li>
+                    <li class="list">
+                        <a href="viewCo_C.php" class="cx-page-link drop">view Course Content</a>
+                    </li>
+                </ul>
+            </li>
         </ul>
     </div>
 </div>

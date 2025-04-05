@@ -48,9 +48,9 @@
                     <div class="col-xxl-12 col-md-12">
                         <div class="cx-card" id="assigntbl">
                             <div class="cx-card-header">
-                                <h4 class="cx-card-title">View Courses Category</h4>
+                                <h4 class="cx-card-title">View Courses Content</h4>
                                 <div class="header-tools">
-                                    <a href="addCategory.php" class="button-add" title="Add Category">Add Category</a>
+                                    <a href="addCo_C.php" class="button-add" title="Add Category">Add Courses Content</a>
                                 </div>
                             </div>
                             <div class="cx-card-content card-default">
@@ -67,12 +67,17 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-												<?php
-													$category = Operations::getCategory();
-													$i = 0;
+                                                <?php
+                                                    $conn = Database::getConnect();
+													$category = Operations::getContentChecker($conn);
+                                                    $i = 0;
 													foreach ($category as $index => $cate) {
-														if ($cate['page'] === 'course') {
-															$i++;
+                                                        $c = $cate['category'];
+                                                        $qry = $conn->query("SELECT * FROM `sub-category` WHERE `title` = '$c'")->fetch_array();
+                                                        $qr = $qry['category'];
+                                                        $qry = $conn->query("SELECT * FROM `category` WHERE `title` = '$qr'")->fetch_array();
+														if ($qry['page'] === 'course') {
+                                                            $i++
 												?>
                                                 <tr>
                                                     <td class="token"><?= $i ?></td>
@@ -91,8 +96,8 @@
                                                                 <span class="sr-only"><i class="ri-settings-3-line"></i></span>
                                                             </button>
                                                             <div class="dropdown-menu">
-                                                                <a class="dropdown-item" href="editCate.php?edit_id=<?= $cate['id'] ?>">Edit</a>
-                                                                <a class="dropdown-item" href="deleteCate.php?delete_id=<?= $cate['id'] ?>">Delete</a>
+                                                                <a class="dropdown-item" href="editCoC.php?edit_id=<?= $cate['id'] ?>">Edit</a>
+                                                                <a class="dropdown-item" href="deleteContent.php?delete_id=<?= $cate['id'] ?>">Delete</a>
                                                             </div>
                                                         </div>
                                                     </td>

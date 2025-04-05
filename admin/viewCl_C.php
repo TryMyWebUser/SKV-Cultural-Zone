@@ -40,7 +40,7 @@
                         <h5>Dashboard</h5>
                         <ul>
                             <li><a href="index.php">Dashboard</a></li>
-                            <li>View Category</li>
+                            <li>View Class Content</li>
                         </ul>
                     </div>
                 </div>
@@ -48,9 +48,9 @@
                     <div class="col-xxl-12 col-md-12">
                         <div class="cx-card" id="assigntbl">
                             <div class="cx-card-header">
-                                <h4 class="cx-card-title">View Courses Category</h4>
+                                <h4 class="cx-card-title">View Classes Content</h4>
                                 <div class="header-tools">
-                                    <a href="addCategory.php" class="button-add" title="Add Category">Add Category</a>
+                                    <a href="addCl_C.php" class="button-add" title="Add Category">Add Classes Content</a>
                                 </div>
                             </div>
                             <div class="cx-card-content card-default">
@@ -68,11 +68,16 @@
                                             </thead>
                                             <tbody>
 												<?php
-													$category = Operations::getCategory();
-													$i = 0;
+                                                    $conn = Database::getConnect();
+													$category = Operations::getContentChecker($conn);
+                                                    $i = 0;
 													foreach ($category as $index => $cate) {
-														if ($cate['page'] === 'course') {
-															$i++;
+                                                        $c = $cate['category'];
+                                                        $qry = $conn->query("SELECT * FROM `sub-category` WHERE `title` = '$c'")->fetch_array();
+                                                        $qr = $qry['category'];
+                                                        $qry = $conn->query("SELECT * FROM `category` WHERE `title` = '$qr'")->fetch_array();
+														if ($qry['page'] === 'class') {
+                                                            $i++
 												?>
                                                 <tr>
                                                     <td class="token"><?= $i ?></td>
@@ -91,8 +96,8 @@
                                                                 <span class="sr-only"><i class="ri-settings-3-line"></i></span>
                                                             </button>
                                                             <div class="dropdown-menu">
-                                                                <a class="dropdown-item" href="editCate.php?edit_id=<?= $cate['id'] ?>">Edit</a>
-                                                                <a class="dropdown-item" href="deleteCate.php?delete_id=<?= $cate['id'] ?>">Delete</a>
+                                                                <a class="dropdown-item" href="editClC.php?edit_id=<?= $cate['id'] ?>">Edit</a>
+                                                                <a class="dropdown-item" href="deleteContent.php?delete_id=<?= $cate['id'] ?>">Delete</a>
                                                             </div>
                                                         </div>
                                                     </td>

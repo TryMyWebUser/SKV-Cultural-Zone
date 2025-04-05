@@ -57,11 +57,11 @@
             <div class="cx-main-content">
                 <div class="cx-breadcrumb">
                     <div class="cx-page-title cx-page-title-2">
-                        <h5>Add Category</h5>
+                        <h5>Edit Sub Category</h5>
                         <p class="<?= $error ? 'text-danger' : 'text-success' ?>"><?= $error ?></p>
                         <ul>
                             <li><a href="index.php">Dashboard</a></li>
-                            <li>Add Category</li>
+                            <li>Edit Sub Category</li>
                         </ul>
                     </div>
                 </div>

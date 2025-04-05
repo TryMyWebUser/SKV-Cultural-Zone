@@ -10,11 +10,28 @@ class Operations
         $result = $conn->query($sql);
         return iterator_to_array($result);
     }
-    public static function getProducts()
+    public static function getSubCategory($cate)
     {
         $conn = Database::getConnect();
-        $sql = "SELECT * FROM `products` ORDER BY `created_at` ASC";
+
+        // Join category and sub-category tables
+        $sql = "SELECT sub.* FROM `sub-category` sub 
+                INNER JOIN `category` cat ON sub.category = cat.title 
+                WHERE cat.page = '$cate'";
+        
         $result = $conn->query($sql);
+
+        return iterator_to_array($result);
+    }
+    public static function getESubCategory($cate, $conn)
+    {
+        // Join category and sub-category tables
+        $sql = "SELECT sub.* FROM `sub-category` sub 
+                INNER JOIN `category` cat ON sub.category = cat.title 
+                WHERE cat.page = '$cate'";
+        
+        $result = $conn->query($sql);
+
         return iterator_to_array($result);
     }
     public static function getCateChecker($conn)
@@ -36,22 +53,9 @@ class Operations
         $result = $conn->query($sql);
         return iterator_to_array($result);
     }
-    public static function getProductChecker($conn)
+    public static function getContentChecker($conn)
     {
-        $sql = "SELECT * FROM `products` ORDER BY `created_at` ASC";
-        $result = $conn->query($sql);
-        return iterator_to_array($result);
-    }
-
-    public static function getCatePage($page, $conn)
-    {
-        $sql = "SELECT * FROM `category` WHERE `page` = '$page'";
-        $result = $conn->query($sql);
-        return iterator_to_array($result);
-    }
-    public static function getProductPage($page, $conn)
-    {
-        $sql = "SELECT * FROM `products` WHERE `category` = '$page'";
+        $sql = "SELECT * FROM `cate-content` ORDER BY `created_at` ASC";
         $result = $conn->query($sql);
         return iterator_to_array($result);
     }
@@ -70,10 +74,10 @@ class Operations
         $result = $conn->query($sql);
         return $result ? $result->fetch_assoc() : null;
     }
-    public static function getProduct($conn)
+    public static function getContent($conn)
     {
         $getID = $_GET['edit_id'];
-        $sql = "SELECT * FROM `products` WHERE `id` = '$getID'";
+        $sql = "SELECT * FROM `cate-content` WHERE `id` = '$getID'";
         $result = $conn->query($sql);
         return $result ? $result->fetch_assoc() : null;
     }

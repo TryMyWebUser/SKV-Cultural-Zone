@@ -11,22 +11,19 @@
         exit;
     }
 
-    $conn = Database::getConnect();
-    $cate = Operations::getCate($conn);
-
     $error = "";
 
     // Check if form is submitted
     if ($_SERVER['REQUEST_METHOD'] === 'POST')
     {
         // Check if both username and password keys exist in $_POST
-        if (isset($_POST['submit']) && isset($_POST['title']) && isset($_POST['category']))
+        if (isset($_POST['submit']) && isset($_FILES['img']) && isset($_POST['title']) && isset($_POST['dec']) && isset($_POST['category']))
         {
-            $getID = $_GET['edit_id'] ?? "";
-            $img = $_FILES['img'] ?? "";
+			$img = $_FILES['img'] ?? "";
             $title = $_POST['title'] ?? "";
+            $dec = $_POST['dec'] ?? "";
             $cate = $_POST['category'] ?? "";
-            $error = User::updateCategory($getID, $img, $title, $cate, $conn);
+            $error = User::setContent($title, $dec, $img, $cate);
         }
     }
 
@@ -56,11 +53,11 @@
             <div class="cx-main-content">
                 <div class="cx-breadcrumb">
                     <div class="cx-page-title cx-page-title-2">
-                        <h5>Edit Category</h5>
-                        <p class="<?= $error ? 'text-danger' : 'text-success' ?>"><?= $error ?></p>
+                        <h5>Add Class Content</h5>
+						<p class="<?= $error ? 'text-danger' : 'text-success' ?>"><?= $error ?></p>
                         <ul>
                             <li><a href="index.php">Dashboard</a></li>
-                            <li>Edit Category</li>
+                            <li>Add Category Content</li>
                         </ul>
                     </div>
                 </div>
@@ -70,18 +67,23 @@
                             <div class="cx-vendor-upload-detail">
                                 <form class="row g-3" method="POST" enctype="multipart/form-data">
 									<div class="col-md-12">
-                                        <label class="form-label">Select Categories Page</label>
+                                        <label class="form-label">Select Category</label>
                                         <select class="form-control form-select" id="category" name="category" required>
-											<option vlaue="<?= $cate['page'] ?>"><?= $cate['page'] ?></option>
-											<option value="class">Classes</option>
-											<option value="Course">Courses</option>
+											<option>Select Page</option>
+                                            <?php $categories = Operations::getSubCategory('class'); foreach ($categories as $category) { ?>
+                                                <option value="<?= $category['title'] ?>"><?= $category['title'] ?></option>
+                                            <?php } ?>
                                         </select>
                                     </div>
                                     <div class="col-md-12">
                                         <label for="slug" class="col-12 col-form-label">Title</label>
                                         <div class="col-12">
-                                            <input id="slug" name="title" class="form-control here set-slug" type="text" value="<?= $cate['title'] ?>" required/>
+                                            <input id="slug" name="title" class="form-control here set-slug" type="text" required/>
                                         </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label class="form-label">Description</label>
+                                        <textarea class="form-control" type="text" rows="4" name="dec" required></textarea>
                                     </div>
 									<div class="col-md-12">
 										<label for="Image" class="col-12 col-form-label">Upload Image</label>
@@ -92,12 +94,12 @@
 														<div class="thumb-upload-set colo-md-12">
 															<div class="thumb-upload m-0">
 																<div class="thumb-edit">
-																	<input type="file" id="thumbUpload03" class="cx-image-upload" name="img" accept="image/*">
+																	<input type="file" id="thumbUpload03" class="cx-image-upload" name="img" accept="image/*" required>
 																	<label><i class="ri-pencil-line"></i></label>
 																</div>
 																<div class="thumb-preview cx-preview">
 																	<div class="image-thumb-preview">
-																		<img class="image-thumb-preview cx-image-preview" src="<?= $cate['img'] ?>" alt="edit">
+																		<img class="image-thumb-preview cx-image-preview" src="assets/img/product/preview-2.jpg" alt="edit">
 																	</div>
 																</div>
 															</div>
@@ -108,7 +110,7 @@
 										</div>
 									</div>
                                     <div class="col-md-12">
-                                        <button type="submit" name="submit" class="cx-btn cx-btn-primary">Save</button>
+                                        <button type="submit" name="submit" class="cx-btn cx-btn-primary">Submit</button>
                                     </div>
 								</form>
                             </div>
