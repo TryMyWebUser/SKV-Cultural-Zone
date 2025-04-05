@@ -29,6 +29,13 @@ class Operations
         $result = $conn->query($sql);
         return iterator_to_array($result);
     }
+    public static function getSubCategoryChecker($conn)
+    {
+        $getData = $_GET['data'];
+        $sql = "SELECT * FROM `sub-category` WHERE `category` = '$getData'";
+        $result = $conn->query($sql);
+        return iterator_to_array($result);
+    }
     public static function getProductChecker($conn)
     {
         $sql = "SELECT * FROM `products` ORDER BY `created_at` ASC";

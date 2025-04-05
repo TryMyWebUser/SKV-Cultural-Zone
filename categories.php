@@ -38,86 +38,26 @@
                         <div class="service-wrapper">
                             <div class="pattern-circle overlay"></div>
                             <div class="service-content">
+                                <?php
+                                    $category = Operations::getSubCategoryChecker($conn);
+                                    if (!empty($category)) {
+                                        foreach ($category as $sub) {
+                                ?>
                                 <div class="course-type">
                                     <div class="course-icon">
-                                        <img src="assets/img/cate/vocal.png" alt="Vocal Images">
+                                        <img src="assets/<?= $sub['img'] ?>" alt="Images">
                                     </div>
                                     <h4 class="course-title">
                                         <a href="comming-soon.php">
-                                            Vocal
+                                            <?= $sub['title'] ?>
                                         </a>
                                     </h4>
                                 </div>
-                                <div class="course-type">
-                                    <div class="course-icon">
-                                        <img src="assets/img/cate/veena.png" alt="Veena Images">
-                                    </div>
-                                    <h4 class="course-title">
-                                        <a href="comming-soon.php">
-                                            Veena
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div class="course-type">
-                                    <div class="course-icon">
-                                        <img src="assets/img/cate/flute.png" alt="Flute Images">
-                                    </div>
-                                    <h4 class="course-title">
-                                        <a href="comming-soon.php">
-                                            Flute
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div class="course-type">
-                                    <div class="course-icon">
-                                        <img src="assets/img/cate/violin.png" alt="Violin Images">
-                                    </div>
-                                    <h4 class="course-title">
-                                        <a href="comming-soon.php">
-                                            Violin
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div class="course-type">
-                                    <div class="course-icon">
-                                        <img src="assets/img/cate/harmonium.png" alt="Harmonium Images">
-                                    </div>
-                                    <h4 class="course-title">
-                                        <a href="comming-soon.php">
-                                            Harmonium
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div class="course-type">
-                                    <div class="course-icon">
-                                        <img src="assets/img/cate/mridangam.png" alt="Mridangam Images">
-                                    </div>
-                                    <h4 class="course-title">
-                                        <a href="comming-soon.php">
-                                            Mridangam
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div class="course-type">
-                                    <div class="course-icon">
-                                        <img src="assets/img/cate/tabla.png" alt="Tabla Images">
-                                    </div>
-                                    <h4 class="course-title">
-                                        <a href="comming-soon.php">
-                                            Tabla
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div class="course-type">
-                                    <div class="course-icon">
-                                        <img src="assets/img/cate/voice-culture.png" alt="Voice Culture Images">
-                                    </div>
-                                    <h4 class="course-title">
-                                        <a href="comming-soon.php">
-                                            Voice Culture
-                                        </a>
-                                    </h4>
-                                </div>
+                                <?php
+                                    } } else {
+                                        echo "<p>No Categories Found</p>";
+                                    }
+                                ?>
                             </div>
                         </div>
                     </div>

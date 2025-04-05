@@ -1,3 +1,12 @@
+<?php
+
+    include "libs/load.php";
+
+    $conn = Database::getConnect();
+    $category = Operations::getCateChecker($conn);
+
+?>
+
 <header class="site-header site-header-transparent">
     <!-- header html start -->
     <div class="top-header">
@@ -70,47 +79,27 @@
                             <li class="menu-item-has-children">
                                 <a href="#">Classes</a>
                                 <ul>
+                                    <?php
+                                        foreach ($category as $cate) {
+                                            if ($cate['page'] === 'class') {
+                                    ?>
                                     <li>
-                                        <a href="categories.php">Karnatic</a>
+                                        <a href="categories.php?data=<?= $cate['title'] ?>"><?= $cate['title'] ?></a>
                                     </li>
-                                    <li>
-                                        <a href="comming-soon.php">Western</a>
-                                    </li>
-                                    <li>
-                                        <a href="comming-soon.php">Dance</a>
-                                    </li>
+                                    <?php } } ?>
                                 </ul>
                             </li>
                             <li class="menu-item-has-children">
                                 <a href="#">Courses</a>
                                 <ul>
+                                    <?php
+                                        foreach ($category as $cate) {
+                                            if ($cate['page'] === 'course') {
+                                    ?>
                                     <li>
-                                        <a href="comming-soon.php">Hindi</a>
+                                        <a href="categories.php?data=<?= $cate['title'] ?>"><?= $cate['title'] ?></a>
                                     </li>
-                                    <li>
-                                        <a href="comming-soon.php">Sanskrit</a>
-                                    </li>
-                                    <li>
-                                        <a href="comming-soon.php">English</a>
-                                    </li>
-                                    <li>
-                                        <a href="comming-soon.php">Drawing</a>
-                                    </li>
-                                    <li>
-                                        <a href="comming-soon.php">Karate</a>
-                                    </li>
-                                    <li>
-                                        <a href="comming-soon.php">Handwriting</a>
-                                    </li>
-                                    <li>
-                                        <a href="comming-soon.php">Chess</a>
-                                    </li>
-                                    <li>
-                                        <a href="comming-soon.php">Carrom</a>
-                                    </li>
-                                    <li>
-                                        <a href="comming-soon.php">Yoga</a>
-                                    </li>
+                                    <?php } } ?>
                                 </ul>
                             </li>
                             <li>

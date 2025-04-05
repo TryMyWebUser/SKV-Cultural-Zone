@@ -88,132 +88,39 @@
                                     <div class="title-divider"></div>
                                     <h2>Our Classes</h2>
                                 </div>
+                                <?php
+                                    $category = Operations::getCateChecker($conn);
+                                    foreach ($category as $cate) {
+                                        if ($cate['page'] === 'class') {
+                                ?>
                                 <div class="course-type">
                                     <div class="course-icon">
-                                        <img src="assets/img/karnatic.png" alt="Karnatic Images">
+                                        <img src="assets/<?= $cate['img'] ?>" alt="Images">
                                     </div>
                                     <h4 class="course-title">
-                                        <a href="categories.php">
-                                        Karnatic
-                                        </a>
+                                        <a href="categories.php?date=<?= $cate['title'] ?>"><?= $cate['title'] ?></a>
                                     </h4>
                                 </div>
-                                <div class="course-type">
-                                    <div class="course-icon">
-                                        <img src="assets/img/western.png" alt="Western Images">
-                                    </div>
-                                    <h4 class="course-title">
-                                        <a href="categories.php">
-                                        Western
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div class="course-type">
-                                    <div class="course-icon">
-                                        <img src="assets/img/dance.png" alt="Dance Images">
-                                    </div>
-                                    <h4 class="course-title">
-                                        <a href="categories.php">
-                                        Dance
-                                        </a>
-                                    </h4>
-                                </div>
+                                <?php } } ?>
                             </div>
                             <div class="service-content">
                                 <div class="section-head">
                                     <div class="title-divider"></div>
                                     <h2>Our Courses</h2>
                                 </div>
+                                <?php
+                                    foreach ($category as $cate) {
+                                        if ($cate['page'] === 'course') {
+                                ?>
                                 <div class="course-type">
                                     <div class="course-icon">
-                                        <img src="assets/img/hindi.png" alt="Hindi Images">
+                                        <img src="assets/<?= $cate['img'] ?>" alt="Images">
                                     </div>
                                     <h4 class="course-title">
-                                        <a href="comming-soon.php">
-                                            Hindi
-                                        </a>
+                                        <a href="categories.php?date=<?= $cate['title'] ?>"><?= $cate['title'] ?></a>
                                     </h4>
                                 </div>
-                                <div class="course-type">
-                                    <div class="course-icon">
-                                        <img src="assets/img/sanskrit.png" alt="Sanskrit Images">
-                                    </div>
-                                    <h4 class="course-title">
-                                        <a href="comming-soon.php">
-                                            Sanskrit
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div class="course-type">
-                                    <div class="course-icon">
-                                        <img src="assets/img/english.png" alt="English Images">
-                                    </div>
-                                    <h4 class="course-title">
-                                        <a href="comming-soon.php">
-                                            English
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div class="course-type">
-                                    <div class="course-icon">
-                                        <img src="assets/img/drawing.png" alt="Drawing Images">
-                                    </div>
-                                    <h4 class="course-title">
-                                        <a href="comming-soon.php">
-                                            Drawing
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div class="course-type">
-                                    <div class="course-icon">
-                                        <img src="assets/img/karate.png" alt="Karate Images">
-                                    </div>
-                                    <h4 class="course-title">
-                                        <a href="comming-soon.php">
-                                            Karate
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div class="course-type">
-                                    <div class="course-icon">
-                                        <img src="assets/img/handwriting.png" alt="Handwriting Images">
-                                    </div>
-                                    <h4 class="course-title">
-                                        <a href="comming-soon.php">
-                                            Handwriting
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div class="course-type">
-                                    <div class="course-icon">
-                                        <img src="assets/img/chess.png" alt="Chess Images">
-                                    </div>
-                                    <h4 class="course-title">
-                                        <a href="comming-soon.php">
-                                            Chess
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div class="course-type">
-                                    <div class="course-icon">
-                                        <img src="assets/img/carrom.png" alt="Carrom Images">
-                                    </div>
-                                    <h4 class="course-title">
-                                        <a href="comming-soon.php">
-                                            Carrom
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div class="course-type">
-                                    <div class="course-icon">
-                                        <img src="assets/img/yoga.png" alt="Yoga Images">
-                                    </div>
-                                    <h4 class="course-title">
-                                        <a href="comming-soon.php">
-                                            Yoga
-                                        </a>
-                                    </h4>
-                                </div>
+                                <?php } } ?>
                             </div>
                         </div>
                     </div>
