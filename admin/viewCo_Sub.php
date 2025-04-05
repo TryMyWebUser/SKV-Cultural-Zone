@@ -50,7 +50,7 @@
                             <div class="cx-card-header">
                                 <h4 class="cx-card-title">View Courses Category</h4>
                                 <div class="header-tools">
-                                    <a href="addCategory.php" class="button-add" title="Add Category">Add Category</a>
+                                    <a href="addCo_Sub.php" class="button-add" title="Add Category">Add Sub Courses</a>
                                 </div>
                             </div>
                             <div class="cx-card-content card-default">
