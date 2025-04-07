@@ -48,7 +48,7 @@
                                         <img src="assets/<?= $sub['img'] ?>" alt="Images">
                                     </div>
                                     <h4 class="course-title">
-                                        <a href="comming-soon.php">
+                                        <a href="content.php?data=<?= $sub['title'] ?>">
                                             <?= $sub['title'] ?>
                                         </a>
                                     </h4>

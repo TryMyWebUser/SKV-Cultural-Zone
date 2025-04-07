@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 05, 2025 at 11:14 AM
+-- Generation Time: Apr 07, 2025 at 06:12 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -41,6 +41,21 @@ CREATE TABLE `auth` (
 
 INSERT INTO `auth` (`id`, `username`, `email`, `password`, `created_at`) VALUES
 (1, 'skv', 'skvculturalzone@gmail.com', 'skv@2025', '2025-04-05 10:29:54');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cate-content`
+--
+
+CREATE TABLE `cate-content` (
+  `id` int(11) NOT NULL,
+  `img` varchar(1024) NOT NULL,
+  `title` varchar(100) NOT NULL,
+  `dec` longtext NOT NULL,
+  `category` varchar(255) NOT NULL,
+  `created_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -113,6 +128,12 @@ ALTER TABLE `auth`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `cate-content`
+--
+ALTER TABLE `cate-content`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `category`
 --
 ALTER TABLE `category`
@@ -135,6 +156,12 @@ ALTER TABLE `auth`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `cate-content`
+--
+ALTER TABLE `cate-content`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
@@ -144,7 +171,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `sub-category`
 --
 ALTER TABLE `sub-category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

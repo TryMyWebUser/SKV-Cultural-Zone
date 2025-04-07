@@ -25,76 +25,42 @@
                     <div class="inner-baner-container" style="background-image: url(assets/img/educator-img12.jpg);">
                         <div class="container">
                             <div class="inner-banner-content">
-                                <h1 class="inner-title">Pay Now</h1>
+                                <h1 class="inner-title"><?= $_GET['data'] ?></h1>
                             </div>
                         </div>
                     </div>
                 </section>
                 <!-- Inner Banner html end-->
                 <!-- home about section html start -->
-                <section class="home-about-us mb-5 pb-5">
+                <?php
+                    $content = Operations::getContentChecker($conn);
+                    if(!empty($content)) {
+                        foreach ($content as $row) {
+                ?>
+                <section class="home-about-us pt-0" style="margin-bottom: 110px;">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-6">
-                                <div class="about-left-content">
-                                    <figure class="figure-round-border" style="background: #F24080; padding: 5rem;">
-                                        <img src="assets/img/QR.png" class="m-0" alt="Payment Scanner Images" />
+                                <div class="about-left-content m-0">
+                                    <figure class="figure-round-border">
+                                        <img src="assets/<?= $row['img'] ?>" class="m-0" alt="Image" />
                                     </figure>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="about-right-content">
                                     <div class="title-divider"></div>
-                                    <h2 class="about-title">Pay Now</h2>
+                                    <h2 class="about-title"><?= $row['title'] ?></h2>
                                     <p class="about-desc">
-                                        We offer expert training in Carnatic and Western music, dance, and drawing, with qualified teachers. Exams are conducted through Annamalai and Trinity Universities.
+                                        <?= $row['dec'] ?>
                                     </p>
-                                    <div class="contact-page-section">
-                                        <div class="contact-form-inner m-0">
-                                            <div class="pattern-overlay zigzag-patten"></div>                                  
-                                            <div class="contact-detail-container">
-                                                <div class="contact-details-list">
-                                                    <ul>
-                                                        <li class="p-0">
-                                                            <span class="icon">
-                                                                <i aria-hidden="true" class="icon icon-phone1"></i>
-                                                            </span>
-                                                            <div class="details-content">
-                                                                <h5>Phone Number :</h5>
-                                                                <span>+91 984 268 8981</span>
-                                                                <span>+91 807 257 1057</span>
-                                                            </div>
-                                                        </li>
-                                                        <li class="p-0">
-                                                            <span class="icon">
-                                                                <i aria-hidden="true" class="icon icon-envelope3"></i>
-                                                            </span>
-                                                            <div class="details-content">
-                                                                <h5>Email address :</h5>
-                                                                <span><a href="mailto:skvculturalzone@gmail.com">skvculturalzone@gmail.com</a></span>
-                                                            </div>
-                                                        </li>
-                                                        <li class="p-0">
-                                                            <span class="icon">
-                                                                <i aria-hidden="true" class="icon icon-map-marker1"></i>
-                                                            </span>
-                                                            <div class="details-content">
-                                                                <h5>Location Address :</h5>
-                                                                <span>178, Kuppichipalayam Rd, Periyanaickenpalayam,</span>
-                                                                <span>SRKV Post, Coimbatore - 641020</span>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>                               
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="pattern-overlay"></div>
                     </div>
                 </section>
+                <?php } } else { echo "<p class='ps-5 pb-5'>Category Content Not Found</p>"; } ?>
             </main>
             
             <?php include "temp/footer.php" ?>
