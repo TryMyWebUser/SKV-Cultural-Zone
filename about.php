@@ -79,7 +79,7 @@
                             <div class="about-right-banner">
                                 <h4>About Us</h4>
                                 <p>
-                                    Welcome to SKV Cultural Zone, where passion for music meets 28 years of excellence in nurturing talent and creativity. Established with the mission to promote music and cultural education, SKV Cultural Zone has become a hub for aspiring musicians, artists, and performers seeking to refine their skills and explore their artistic potential. <br><h5><b>Dr. Siva Gandarvani. S (Proprietor).</b></h5>
+                                    Welcome to SKV Cultural Zone, where passion for music meets 28 years of excellence in nurturing talent and creativity. Established with the mission to promote music and cultural education, SKV Cultural Zone has become a hub for aspiring musicians, artists, and performers seeking to refine their skills and explore their artistic potential. <br><h5><b>Dr. Siva Gandarvan. S (Proprietor).</b></h5>
                                 </p>
                             </div>
                         </div>
@@ -98,8 +98,8 @@
                             <div class="col-md-6">
                                 <h4>Experience</h4>
                                 <p class="about-describe info-right">
-                                    - 30 Years Experienced in Carnatic Vocal Concerts.<br>
-                                    - 20 Years Experienced in Music Teaching.<br>
+                                    - 35 Years Experienced in Carnatic Vocal Concerts.<br>
+                                    - 30 Years Experienced in Music Teaching.<br>
                                     - 15 Years Worked as a Guest Lecturer in TN Govt Music College, Coimbatore.<br>
                                     - 101 Krithis Composed in Tamil (Own Composing).<br>
                                 </p>

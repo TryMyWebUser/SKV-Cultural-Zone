@@ -36,7 +36,7 @@ class Operations
     }
     public static function getCateChecker($conn)
     {
-        $sql = "SELECT * FROM `category` ORDER BY `created_at` ASC";
+        $sql = "SELECT * FROM `category` ORDER BY `id` ASC";
         $result = $conn->query($sql);
         return iterator_to_array($result);
     }

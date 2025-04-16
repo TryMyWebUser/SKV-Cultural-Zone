@@ -54,7 +54,8 @@
                                     </h4>
                                 </div>
                                 <?php
-                                    } } else {
+                                    } 
+                                    } else {
                                         echo "<p>No Categories Found</p>";
                                     }
                                 ?>

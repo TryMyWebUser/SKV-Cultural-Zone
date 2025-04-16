@@ -69,13 +69,20 @@
                 </div>
                 <div class="main-navigation col-lg-9 justify-content-between d-flex align-items-center">
                     <nav id="navigation" class="navigation d-none d-lg-inline-block">
-                        <ul>
+                        <ul style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center;">
                             <li class="current-menu-item">
                                 <a href="index.php">Home</a>
                             </li>
                             <li>
                                 <a href="about.php">About Us</a>
                             </li>
+                            <!-- < ?php
+                                foreach ($category as $cate) {
+                            ?>
+                            <li>
+                                <a href="categories.php?data=< ?= $cate['title'] ?>">< ?= $cate['title'] ?></a>
+                            </li>
+                            < ?php } ?> -->
                             <li class="menu-item-has-children">
                                 <a href="#">Classes</a>
                                 <ul>
@@ -89,9 +96,9 @@
                                     <?php } } ?>
                                 </ul>
                             </li>
-                            <li class="menu-item-has-children">
+                            <!-- <li class="menu-item-has-children">
                                 <a href="#">Courses</a>
-                                <ul>
+                                <ul> -->
                                     <?php
                                         foreach ($category as $cate) {
                                             if ($cate['page'] === 'course') {
@@ -100,8 +107,8 @@
                                         <a href="categories.php?data=<?= $cate['title'] ?>"><?= $cate['title'] ?></a>
                                     </li>
                                     <?php } } ?>
-                                </ul>
-                            </li>
+                                <!-- </ul>
+                            </li> -->
                             <li>
                                 <a href="pay.php">Pay Now</a>
                             </li>

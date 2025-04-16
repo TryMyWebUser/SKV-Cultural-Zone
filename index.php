@@ -66,7 +66,7 @@
                                     <div class="title-divider"></div>
                                     <h2 class="about-title">SKV Cultural Zone</h2>
                                     <p class="about-desc">
-                                        Welcome to SKV Cultural Zone, where passion for music meets 28 years of excellence in nurturing talent and creativity. Established with the mission to promote music and cultural education, SKV Cultural Zone has become a hub for aspiring musicians, artists, and performers seeking to refine their skills and explore their artistic potential - Dr. Siva Gandarvani. S (Proprietor).
+                                        Welcome to SKV Cultural Zone, where passion for music meets 28 years of excellence in nurturing talent and creativity. Established with the mission to promote music and cultural education, SKV Cultural Zone has become a hub for aspiring musicians, artists, and performers seeking to refine their skills and explore their artistic potential - Dr. Siva Gandarvan. S (Proprietor).
                                     </p>
                                     <div class="about-btn">
                                         <a href="about.php" class="button-round-secondary">READ MORE</a>
